@@ -1,0 +1,31 @@
+{
+  "name": "Eleventy Starter from the Lit team, modified by Pete Carapetyan",
+  "version": "1.1.0",
+  "description": "11ty with an additional Web Component provided externally",
+  "scripts": {
+    "docs": "npm run docs:clean && mkdir _site && cp my-element.js _site && npm run docs:assets && npm run docs:gen",
+    "docs:clean": "rimraf _site",
+    "docs:gen": "eleventy --config=.eleventy.cjs",
+    "docs:gen:watch": "eleventy --config=.eleventy.cjs --watch",
+    "docs:assets": "cp node_modules/prismjs/themes/prism-okaidia.css _site/",
+    "docs:serve": "wds --root-dir=_site --node-resolve --watch"
+  },
+  "keywords": [
+    "web-components",
+    "11ty"
+  ],
+  "author": "Google LLC",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "lit": "^2.2.4"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "@web/dev-server": "^0.1.31",
+    "@web/dev-server-legacy": "^1.0.0",
+    "@webcomponents/webcomponentsjs": "^2.6.0",
+    "rimraf": "^3.0.2"
+  },
+  "customElements": "custom-elements.json"
+}
